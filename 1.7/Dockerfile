@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-ARG version="1.7.6"
+ENV version="1.7.6"
 
 RUN apk --update add --no-cache git && \ 
     wget -q -O - 'https://github.com/redpen-cc/redpen/releases/download/redpen-${version}/redpen-${version}.tar.gz' | tar -xz && \
