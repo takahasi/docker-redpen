@@ -14,3 +14,5 @@ $ docker run -it takahasi/docker-redpen redpen -c /usr/local/conf/redpen-conf-ja
 |1.9|Redpen 1.9.0|
 |1.8|Redpen 1.8.0|
 |1.7|Redpen 1.7.6|
+|1.6|Redpen 1.6.2|
+|1.5|Redpen 1.5.5|

@@ -27,7 +27,6 @@ class DockerImage:
         self._tag = tag
         self._version = version
 
-
     def create(self):
         if not os.path.exists(self._tag):
             os.makedirs(self._tag)
@@ -48,7 +47,9 @@ if __name__ == '__main__':
         ["1.10", "1.10.1"],
         ["1.9", "1.9.0"],
         ["1.8", "1.8.0"],
-        ["1.7", "1.7.6"]
+        ["1.7", "1.7.6"],
+        ["1.6", "1.6.2"],
+        ["1.5", "1.5.5"]
     ]
 
     for v in version:
