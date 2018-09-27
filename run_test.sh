@@ -15,6 +15,9 @@
 # Checks unnecessary paramters
 set -ue
 
+# Global constants
+readonly target_version="1.5 1.6 1.7 1.8 1.9 1.10"
+
 # func: usage
 # param: none
 # return: none
@@ -38,8 +41,6 @@ function run() {
   echo "docker run -it $1"
   docker run -it "$1" redpen -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
 }
-
-readonly target_version="1.5 1.6 1.7 1.8 1.9 1.10"
 
 #<main>
 for i in ${target_version}; do
