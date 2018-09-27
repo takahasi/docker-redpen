@@ -32,20 +32,32 @@ function usage() {
 function build() {
   echo "docker build $1/ -t $1"
   docker build $1/ -t "$1"
+  return 0
 }
 
-# func: run
+# func: run_local
 # param: tag_name
 # return: always 0
-function run() {
+function run_local() {
   echo "docker run -it $1"
-  docker run -it "$1" redpen -l 10 -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
+  docker run --rm -it "$1" redpen -l 10 -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
+  return 0
+}
+
+# func: run_remote
+# param: tag_name
+# return: always 0
+function run_remote() {
+  echo "docker run -it $1"
+  docker run --rm -it "takahasi/docker-redpen:$1" redpen -l 10 -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
+  return 0
 }
 
 #<main>
 for i in ${target_version}; do
   build $i
-  run $i
+  run_local $i
+  run_remote $i
 done
 #</main>
 
