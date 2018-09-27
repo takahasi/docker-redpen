@@ -1,6 +1,8 @@
 # docker-redpen
 docker image of redpen client
 
+[![Build Status](https://travis-ci.org/takahasi/docker-redpen.svg?branch=master)](https://travis-ci.org/takahasi/docker-redpen)
+
 ## Usage
 
 $ docker run -it takahasi/docker-redpen redpen -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
