@@ -39,7 +39,7 @@ function build() {
 # return: always 0
 function run() {
   echo "docker run -it $1"
-  docker run -it "$1" redpen -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
+  docker run -it "$1" redpen -l 10 -c /usr/local/conf/redpen-conf-ja.xml /usr/local/sample-doc/ja/sampledoc-ja.txt
 }
 
 #<main>
